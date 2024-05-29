@@ -1,0 +1,18 @@
+.carta {
+    background-color: aquamarine;
+    max-width: 30%;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+  
+}
+.gg {
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   background-color: rgb(19, 168, 151);
+}
+.like {
+    display: flex;
+    justify-content: space-between;
+}
