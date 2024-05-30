@@ -4,5 +4,5 @@ export type Tpost = {
     title: string;
     body: string;
     views: number;
-    reactions: { likes: number, "              ": string, dislikes: number }
+    reactions: { likes: number, dislikes: number }
 }

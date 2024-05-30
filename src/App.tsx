@@ -4,13 +4,15 @@ import Navbar from './components/navbar';
 import { Tpost } from './types.ts/commontypes';
 import { AppContext } from './context/appcontext';
 import Cards from './components/body';
+import Textarea from './components/nuovopost'
 
 
 function App() {
-  const [jsonData, setJsonData] = useState<Tpost[]>()
+  const [jsonData, setJsonData] = useState<Tpost[]>();
+  const [checked, setChecked] = useState(false);
 
 
-  const propTypes = { jsonData, setJsonData }
+  const propTypes = { jsonData, setJsonData, checked, setChecked };
 
   useEffect(() => {
     fetch('https://dummyjson.com/posts')
@@ -25,10 +27,12 @@ function App() {
   return (
 
     <AppContext.Provider value={propTypes}>
+      <div>
 
-      <Navbar></Navbar>
-      <Cards></Cards>
-
+        <Navbar></Navbar>
+        {!checked && <Cards />}{" "}
+        {checked && <Textarea />}
+      </div>
     </AppContext.Provider>
   );
 }

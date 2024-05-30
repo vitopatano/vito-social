@@ -14,7 +14,7 @@ function Cards() {
                     <div className='titolo'>{item.title}</div>
                     <div className='body'>{item.body}</div>
                     <div className='like'>
-                        <div className='likes'>{item.reactions.likes}</div>
+                        <div className='likes'>{item.reactions.likes} fff</div>
                         <div className='comments'>{item.reactions.dislikes}</div>
                     </div>
                 </div>
