@@ -27,7 +27,7 @@ function App() {
   return (
 
     <AppContext.Provider value={propTypes}>
-      <div>
+      <div className='tutto'>
 
         <Navbar></Navbar>
         {!checked && <Cards />}{" "}

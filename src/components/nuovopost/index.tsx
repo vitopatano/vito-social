@@ -28,10 +28,6 @@ function Textarea() {
 
     return (
         <div className="textarea">
-            <textarea placeholder="Titolo..." id="title" onChange={(e) => setTitle(e.target.value)}>
-
-            </textarea>
-            <textarea placeholder="Inizia a scrivere..." id="content" onChange={(e) => setContent(e.target.value)}></textarea>
             <div>
                 <button className="postadd" onClick={() => {
                     handleClick();
@@ -40,6 +36,11 @@ function Textarea() {
                     pubblica
                 </button>
             </div>
+            <textarea placeholder="Titolo..." className="title" onChange={(e) => setTitle(e.target.value)}>
+
+            </textarea>
+            <textarea placeholder="Inizia a scrivere..." className="content" onChange={(e) => setContent(e.target.value)}></textarea>
+
 
         </div>
     )

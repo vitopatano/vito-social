@@ -1,11 +1,16 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './style.css'
 import { AppContext } from '../../context/appcontext'
+import { Tpost } from '../../types.ts/commontypes';
 
 
 function Cards() {
     const context = useContext(AppContext)
     const jsonData = context?.jsonData
+
+
+
+
 
     return (
         <div className='gg'>
@@ -14,7 +19,7 @@ function Cards() {
                     <div className='titolo'>{item.title}</div>
                     <div className='body'>{item.body}</div>
                     <div className='like'>
-                        <div className='likes'>{item.reactions.likes} fff</div>
+                        <div className='likes'>{item.reactions.likes} like</div>
                         <div className='comments'>{item.reactions.dislikes}</div>
                     </div>
                 </div>
